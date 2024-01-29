@@ -1,0 +1,369 @@
+:root {
+  --black: #000;
+  --white: #fff;
+  --border: #464646;
+  --grey: #2d2d2d;
+  --light-grey: #808080;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Martel Sans";
+}
+
+body {
+  background: var(--black);
+  width: fit-content;
+  color: var(--white);
+}
+
+a {
+  color: var(--light-grey);
+}
+
+.btn {
+  padding: 5px 15px;
+  background: red;
+  color: var(--white);
+  outline: none;
+  border: none;
+  font-weight: 600;
+  border-radius: 5px;
+  margin: 5px 5px;
+  height: auto;
+}
+
+.btn-sm {
+  background: #70707065;
+  color: var(--white);
+}
+
+.btn-i {
+  height: 3.2rem;
+  width: 10rem;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-i:hover {
+  background: rgb(83, 0, 0);
+  color: var(--white);
+}
+
+.text-xl {
+  font-size: 20px;
+  align-items: center;
+}
+
+.text-xxl {
+  font-size: 40px;
+}
+
+.main {
+  background-image: url("/assets/bg-netflix.jpg");
+  height: 80vh;
+  position: relative;
+  background-position: center center;
+  background-size: max(1300px, 110vw);
+  background-repeat: no-repeat;
+  border-bottom: 7px solid var(--border);
+  box-shadow: inset 0 0 60px 20px black;
+}
+
+.main .box {
+  height: 80vh;
+  width: 100%;
+  opacity: 0.54;
+  position: absolute;
+  top: 0;
+  background: black;
+}
+
+.navbar {
+  max-width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  padding-top: 1.5rem;
+  z-index: 2;
+  position: relative;
+}
+
+.nav-hero {
+  font-family: "Martel Sans", sans-serif;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  position: relative;
+  line-height: 1.2;
+  gap: 23px;
+  padding: 23px;
+  text-align: center;
+}
+
+.nav-hero h1 {
+  font-size: 45px;
+  font-weight: 900;
+}
+
+.nav-hero h3 {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.nav-hero p {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.input {
+  height: auto;
+  width: auto;
+  margin-top: 10px;
+  display: flex;
+}
+
+.input #text {
+  width: 30vw;
+  height: 55px;
+  border: 2px solid rgb(102, 102, 102);
+  background: rgba(15, 15, 15, 0.404);
+  font-size: 15px;
+  outline: none;
+  color: white;
+  margin-right: 5px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+/* First section  */
+
+.section {
+  display: flex;
+  color: var(--white);
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  border-bottom: 7px solid var(--grey);
+}
+
+.section-o {
+  flex-direction: row-reverse;
+}
+
+.section div p {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.section .sec-heading {
+  line-height: 1.5;
+  font-size: 1.5rem;
+  width: 40%;
+  margin: 0 30px;
+}
+
+/* faq section  */
+.faq-section {
+  border-bottom: 7px solid var(--grey);
+}
+
+.faq-section h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.faq-heading {
+  font-size: 25px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  padding: 25px;
+  background: var(--grey);
+  margin: 10px auto 2px;
+  transition: all 0.2s ease-out;
+}
+
+.faq-heading:hover {
+  background: var(--border);
+}
+
+.faq-heading i {
+  position: absolute;
+  right: 0;
+  top: 35px;
+  cursor: pointer;
+  font-size: 1.9rem;
+  padding-right: 10px;
+}
+
+.faq-body {
+  display: none;
+  font-size: 20px;
+  padding: 20px;
+  background: var(--grey);
+  width: 70%;
+  margin: 0 auto;
+}
+
+.faq-body.open {
+  display: block;
+}
+
+.email-input {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 14px auto;
+  padding: 20px 0;
+}
+
+.email-input p {
+  font-size: 20px;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 80%;
+  height: 50vh;
+  margin: auto;
+}
+
+.footer .footer-item {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer button {
+  height: 5vh;
+}
+
+.f-end {
+  margin-top: -15px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  height: 10vh;
+}
+
+/* media Queries */
+
+@media (max-width: 995px) {
+  .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .section .sec-heading {
+    width: auto;
+  }
+  .faq-heading , .faq-body{
+    width: 90%;
+  }
+}
+
+@media (max-width: 750px) {
+  .input #text {
+    display: block;
+    width: 55vw;
+  }
+
+  .input {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar img {
+    height: 60px;
+  }
+
+  .main {
+    height: 80vh;
+  }
+
+  .nav-hero h1 {
+    font-size: 3rem;
+  }
+
+  .nav-hero h3 {
+    font-size: 1.6rem;
+  }
+
+  .nav-hero p {
+    font-size: 1;
+  }
+
+  .btn-i {
+    width: 70%;
+    margin: auto;
+  }
+
+  /* .section */
+
+  .section video {
+    padding: 15px;
+    height: 40vh;
+    width: 100%;
+  }
+
+  .section-o {
+    margin-top: 6rem;
+  }
+}
+
+@media (max-width: 530px) {
+  .input #text {
+    margin-bottom: 2rem;
+    height: 4.5rem;
+    width: 100%;
+    font-size: 29px;
+  }
+
+  .section {
+    text-align: center;
+  }
+
+  .navbar img {
+    margin-left: -5rem;
+  }
+
+  .btn {
+    font-size: 25px;
+  }
+  .email-input p{
+    font-size: 1.5rem;
+    width: 90%;
+  }
+
+  .nav-btn {
+    margin-left: 2rem;
+    display: flex;
+    font-size: 35px;
+  }
+  
+  .footer{
+    font-size: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    margin-top: 35px;
+  }
+}
+
+@media (max-width: 400px) {
+}
